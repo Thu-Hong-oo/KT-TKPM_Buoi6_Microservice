@@ -1,0 +1,33 @@
+### Create a new customer
+POST http://localhost:8082/api/customers
+Content-Type: application/json
+
+{
+  "name": "Thu Hong",
+  "email": "thuhong@example.com",
+  "phone": "0123456789",
+  "address": "123 Main Street"
+}
+
+### Get all customers
+GET http://localhost:8082/api/customers
+
+### Get customer by ID
+GET http://localhost:8082/api/customers/1
+
+### Update customer
+PUT http://localhost:8082/api/customers/1
+Content-Type: application/json
+
+{
+  "name": "John Doe Updated",
+  "email": "john.doe.updated@example.com",
+  "phone": "0987654321",
+  "address": "456 New Street"
+}
+
+### Delete customer
+DELETE http://localhost:8082/api/customers/1
+
+### Check if customer exists
+GET http://localhost:8082/api/customers/exists/1 
