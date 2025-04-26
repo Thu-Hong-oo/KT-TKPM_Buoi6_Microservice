@@ -1,0 +1,41 @@
+### Create a new product
+POST http://localhost:8081/api/products
+Content-Type: application/json
+
+{
+  "name": "iPhone 16",
+  "description": "Latest iPhone model",
+  "price": 999.99,
+  "stockQuantity": 100
+}
+
+### Get all products
+GET http://localhost:8081/api/products
+
+### Get product by ID
+GET http://localhost:8081/api/products/1
+
+### Update product
+PUT http://localhost:8081/api/products/1
+Content-Type: application/json
+
+{
+  "name": "iPhone 15 Pro",
+  "description": "Updated iPhone model",
+  "price": 1299.99,
+  "stockQuantity": 50
+}
+
+### Delete product
+DELETE http://localhost:8081/api/products/1
+
+### Get product price
+GET http://localhost:8081/api/products/price/1
+
+### Update product stock
+PUT http://localhost:8081/api/products/1/stock
+Content-Type: application/json
+
+{
+  "quantity": 200
+} 

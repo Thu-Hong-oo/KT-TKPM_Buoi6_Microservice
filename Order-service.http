@@ -1,0 +1,47 @@
+### Create a new order
+POST http://localhost:8083/api/orders
+Content-Type: application/json
+
+{
+  "customerId": 1,
+  "items": [
+    {
+      "productId": 1,
+      "quantity": 2
+    },
+    {
+      "productId": 2,
+      "quantity": 1
+    }
+  ]
+}
+
+### Get all orders
+GET http://localhost:8083/api/orders
+
+### Get order by ID
+GET http://localhost:8083/api/orders/1
+
+### Get orders by customer ID
+GET http://localhost:8083/api/orders/customer/1
+
+### Test through API Gateway
+### Create order through gateway
+POST http://localhost:8090/api/orders
+Content-Type: application/json
+
+{
+  "customerId": 1,
+  "items": [
+    {
+      "productId": 1,
+      "quantity": 2
+    }
+  ]
+}
+
+### Get all orders through gateway
+GET http://localhost:8090/api/orders
+
+### Get order by ID through gateway
+GET http://localhost:8090/api/orders/1 

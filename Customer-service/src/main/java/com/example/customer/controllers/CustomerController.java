@@ -57,4 +57,10 @@ public class CustomerController {
         }
         return ResponseEntity.notFound().build();
     }
+
+    @GetMapping("/exists/{id}")
+    public ResponseEntity<Boolean> customerExists(@PathVariable Long id) {
+        Customer customer = customerService.findById(id);
+        return ResponseEntity.ok(customer != null);
+    }
 } 
